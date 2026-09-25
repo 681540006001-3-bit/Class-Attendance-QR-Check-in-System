@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ระบบเช็คชื่อเข้าเรียนด้วย QR Code (Class Attendance System)</title>
+    <script>
+      // Single Page Application redirect script for GitHub Pages
+      (function() {
+        var pathSegmentsToKeep = 1;
+        var l = window.location;
+        l.replace(
+          l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+          l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+          l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/') +
+          (l.search ? '&' + l.search.slice(1) : '') +
+          l.hash
+        );
+      }());
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

@@ -201,8 +201,9 @@ export const QRDisplayPage = () => {
     );
   }
 
-  // Dynamic QR Code Construction using window.location.origin
-  const qrUrl = `${window.location.origin}/student-checkin?session=${encodeURIComponent(session.session_code)}`;
+  // Dynamic QR Code Construction using window.location.origin and BASE_URL
+  const basePath = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+  const qrUrl = `${window.location.origin}${basePath}student-checkin?session=${encodeURIComponent(session.session_code)}`;
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(qrUrl);
